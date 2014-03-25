@@ -1,8 +1,11 @@
+#pragma once
 #include <stdio.h>
-#include "Game.h"
+#include "Window.h"
+#include "Input.h"
 
 void main(int argc, char **argv)
 {
-	Game::Init(argc, argv);
-	Game::Start();
+	Window::Init(argc, argv);
+	Input::Init();
+	Window::Start();
 }
