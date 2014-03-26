@@ -2,8 +2,10 @@
 #include "Input.h"
 #include "Log.h"
 #include <GL\freeglut.h>
+#include "Window.h"
 
 Vector2 Input::mousePos = Vector2();
+char Input::mouseBtn[];
 
 void Input::Init()
 {
@@ -13,8 +15,8 @@ void Input::Init()
 
 void Input::SetMousePos(int x, int y)
 {
-	mousePos.x = x;
-	mousePos.y = y;
+	mousePos.x = (float)x;
+	mousePos.y = Window::GetWindowSize().y - (float)y;
 }
 
 void Input::ResetMouseClick()
@@ -24,10 +26,15 @@ void Input::ResetMouseClick()
 
 void Input::SetMouseBTN(int btn, int state, int x, int y)
 {
-	if(state == GLUT_DOWN)
-		Log::Write("%d ON\n", btn);
+	if(state == GLUT_UP)
+		mouseBtn[btn] = 0x00;
 	else
-		Log::Write("%d OFF\n", btn);
+		mouseBtn[btn] = 0x01;
+}
+
+char Input::GetMouseBTN(int btn)
+{
+	return mouseBtn[btn];
 }
 
 Vector2 Input::GetMousePos()

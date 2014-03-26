@@ -1,5 +1,6 @@
 #pragma once
 #include "Square.h"
+#include "Input.h"
 
 
 class Menu
@@ -11,29 +12,9 @@ public:
 	static void Draw();
 
 private:
-
+	static char lastBtn;
+	static char lastBtnState[5];
+	static char DrawButton(Vector2, Vector2, int, char);
+	static void DrawTextInMenu(char*, int, Vector2);
+	static int selected;
 };
-
-Menu::Menu()
-{
-}
-
-Menu::~Menu()
-{
-}
-
-void Menu::Draw()
-{
-	Square::Draw(Vector2(0.2f, 0.4f), Vector2(-0.2f, 0.6f));
-
-	
-	glPushMatrix();
-	glColor3f(0, 0, 0);
-	glRasterPos2f(-0.1f, 0.48f);
-	char startBtn[6] = "Start";
-	
-	for(int i = 0; i < 6; i++)
-		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, startBtn[i]);
-
-    glPopMatrix();
-}

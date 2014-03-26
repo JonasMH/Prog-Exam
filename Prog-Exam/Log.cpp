@@ -7,5 +7,4 @@ void Log::Write(const char* format, ...)
     va_start(argptr, format);
     vfprintf(stderr, format, argptr);
     va_end(argptr);
-	//printf(format);
 }

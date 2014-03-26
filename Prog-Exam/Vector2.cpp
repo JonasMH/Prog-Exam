@@ -3,7 +3,8 @@
 
 Vector2::Vector2()
 {
-	Vector2(0, 0);
+	x = 0;
+	y = 0;
 }
 
 Vector2::Vector2(float i_x, float i_y)

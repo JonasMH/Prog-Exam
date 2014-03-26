@@ -13,10 +13,10 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\Shapes">
+    <Filter Include="Header Files\Shapes">
       <UniqueIdentifier>{732ec4f1-d7cc-4b16-8ab7-660a84ab049d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Shapes\Basic">
+    <Filter Include="Header Files\Shapes\Basic">
       <UniqueIdentifier>{f09da6cd-3a16-4ae1-b0c7-19e151bc73b5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -36,6 +36,18 @@
     <ClCompile Include="Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Square.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Triangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Log.h">
@@ -45,13 +57,13 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Shape.h">
-      <Filter>Source Files\Shapes</Filter>
+      <Filter>Header Files\Shapes</Filter>
     </ClInclude>
     <ClInclude Include="Square.h">
-      <Filter>Source Files\Shapes\Basic</Filter>
+      <Filter>Header Files\Shapes\Basic</Filter>
     </ClInclude>
     <ClInclude Include="Triangle.h">
-      <Filter>Source Files\Shapes\Basic</Filter>
+      <Filter>Header Files\Shapes\Basic</Filter>
     </ClInclude>
     <ClInclude Include="Vector3.h">
       <Filter>Header Files</Filter>
