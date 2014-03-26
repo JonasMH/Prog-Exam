@@ -10,6 +10,7 @@ public:
 	static void Start();
 	static void UpdateTitle(char[]);
 	static Vector2 GetWindowSize();
+	static char sceneToShow;
 
 private:
 	static Vector2 windowSize;

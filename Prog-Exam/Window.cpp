@@ -3,8 +3,10 @@
 #include "Log.h"
 #include "Menu.h"
 #include "Input.h"
+#include "SortingScene.h"
 
 Vector2 Window::windowSize = Vector2(1280, 720);
+char Window::sceneToShow = 0x00;
 
 void Window::Init(int argc, char **argv)
 {
@@ -23,7 +25,7 @@ void Window::Init(int argc, char **argv)
 
 	Window::UpdateTitle("Sorting Algorithms Visualization - By Jonas Møgelvang Hansen");
 
-	Log::Write("Game initialization done");
+	Log::Write("Game initialization done\n");
 }
 
 void Window::Start()
@@ -33,6 +35,7 @@ void Window::Start()
 
 void Window::ResizeWindow(int i_Width, int i_Height)
 {
+	glutReshapeWindow(1280, 720);
 	windowSize.x = (float)i_Width;
 	windowSize.y = (float)i_Height;
 }
@@ -47,7 +50,20 @@ void Window::Draw()
 	
 	glClear(GL_COLOR_BUFFER_BIT);
 
-	Menu::Draw();
+	switch (sceneToShow)
+	{
+	case 0x00:
+		Menu::Draw();
+		break;
+	case 0x01:
+		SortingScene::Draw();
+		break;
+
+	default:
+		Menu::Draw();
+		break;
+	}
+
 	glutSwapBuffers();
 }
 

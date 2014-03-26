@@ -78,7 +78,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BarGraph.cpp" />
+    <ClCompile Include="BubbleSort.cpp" />
+    <ClCompile Include="BubbleSort.h" />
     <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="SortingScene.cpp" />
     <ClCompile Include="Square.cpp" />
     <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="Vector3.cpp" />
@@ -90,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BarGraph.h" />
+    <ClInclude Include="SortingScene.h" />
     <ClInclude Include="Window.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="Log.h" />
