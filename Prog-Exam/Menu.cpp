@@ -14,7 +14,7 @@ Menu::~Menu()
 char Menu::lastBtn = 0x00;
 char Menu::lastBtnState[];
 int Menu::selected;
-int Menu::bars = 1000;
+int Menu::bars = 100;
 
 void Menu::Draw()
 {
@@ -30,7 +30,7 @@ void Menu::Draw()
 	{
 		selected = 0;
 	}
-	DrawTextInMenu("Selection sort", 14, Vector2(-0.1f, 0.18f));
+	DrawTextInMenu("Insertion sort", 14, Vector2(-0.1f, 0.18f));
 
 	if(DrawButton(Vector2(0.2f, -0.2f), Vector2(-0.2f, 0.f), 2, selected == 1 ? 0x01 : 0x00))
 	{

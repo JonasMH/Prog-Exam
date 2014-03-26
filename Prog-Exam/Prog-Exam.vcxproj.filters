@@ -19,6 +19,12 @@
     <Filter Include="Header Files\Shapes\Basic">
       <UniqueIdentifier>{f09da6cd-3a16-4ae1-b0c7-19e151bc73b5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Sorts">
+      <UniqueIdentifier>{135255fc-0557-4582-b039-fb7ece8e3d15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sorts">
+      <UniqueIdentifier>{ec8aab25-7ee9-466a-a237-bad145990dc5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -54,11 +60,20 @@
     <ClCompile Include="BarGraph.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MergeSort.h">
+      <Filter>Header Files\Sorts</Filter>
+    </ClCompile>
     <ClCompile Include="BubbleSort.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Sorts</Filter>
+    </ClCompile>
+    <ClCompile Include="InsertionSort.cpp">
+      <Filter>Source Files\Sorts</Filter>
     </ClCompile>
     <ClCompile Include="BubbleSort.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Sorts</Filter>
+    </ClCompile>
+    <ClCompile Include="MergeSort.cpp">
+      <Filter>Source Files\Sorts</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +109,9 @@
     </ClInclude>
     <ClInclude Include="SortingScene.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InsertionSort.h">
+      <Filter>Header Files\Sorts</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

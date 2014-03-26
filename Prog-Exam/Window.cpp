@@ -1,9 +1,5 @@
 #pragma once
 #include "Window.h"
-#include "Log.h"
-#include "Menu.h"
-#include "Input.h"
-#include "SortingScene.h"
 
 Vector2 Window::windowSize = Vector2(1280, 720);
 char Window::sceneToShow = 0x00;

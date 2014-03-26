@@ -4,7 +4,7 @@
 
 void Square::Draw(Vector2 i_P1, Vector2 i_P2)
 {
-	Draw(i_P1, i_P2, Vector3(255, 255, 255));
+	Draw(i_P1, i_P2, Vector3(1, 1, 1));
 }
 
 void Square::Draw(Vector2 i_P1, Vector2 i_P2, Vector3 i_Color)

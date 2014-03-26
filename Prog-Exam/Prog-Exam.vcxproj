@@ -81,7 +81,10 @@
     <ClCompile Include="BarGraph.cpp" />
     <ClCompile Include="BubbleSort.cpp" />
     <ClCompile Include="BubbleSort.h" />
+    <ClCompile Include="InsertionSort.cpp" />
     <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="MergeSort.cpp" />
+    <ClCompile Include="MergeSort.h" />
     <ClCompile Include="SortingScene.cpp" />
     <ClCompile Include="Square.cpp" />
     <ClCompile Include="Triangle.cpp" />
@@ -94,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BarGraph.h" />
+    <ClInclude Include="InsertionSort.h" />
     <ClInclude Include="SortingScene.h" />
     <ClInclude Include="Window.h" />
     <ClInclude Include="Input.h" />

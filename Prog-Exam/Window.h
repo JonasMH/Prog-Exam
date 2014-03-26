@@ -1,6 +1,11 @@
+#pragma once
 #include <stdio.h>
 #include <GL\freeglut.h>
 #include "Vector2.h"
+#include "Log.h"
+#include "Menu.h"
+#include "Input.h"
+#include "SortingScene.h"
 
 class Window
 {
