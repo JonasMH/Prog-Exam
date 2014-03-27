@@ -13,7 +13,7 @@ void InsertionSort::Reset()
 
 void InsertionSort::Step()
 {
-	if(progress < Menu::bars + 2)
+	if(progress < Menu::bars + 1)
 	{
 		if(!(jProgress > 0 && SortingScene::GetFromArray(jProgress-1) > SortingScene::GetFromArray(jProgress)))
 		{

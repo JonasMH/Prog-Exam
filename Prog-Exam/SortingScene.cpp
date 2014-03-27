@@ -74,7 +74,7 @@ void SortingScene::Draw()
 	Menu::DrawTextInMenu("Back", 4, Vector2(-0.98, 0.93f), Vector3(0, 0, 0));
 
 	//Sort
-	if(clock() - lastTime > 1)
+	if(clock() - lastTime > 20)
 	{
 		lastTime = (float)clock();
 		SortingStep();

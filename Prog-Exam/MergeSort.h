@@ -1,7 +1,7 @@
 #pragma once
 #include "Menu.h"
 #include "SortingScene.h"
-
+/*
 class MergeSort
 {
 public:
@@ -11,4 +11,4 @@ public:
 
 private:
 
-};
+};*/
