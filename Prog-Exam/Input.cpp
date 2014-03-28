@@ -1,8 +1,5 @@
 #pragma once
 #include "Input.h"
-#include "Log.h"
-#include <GL\freeglut.h>
-#include "Window.h"
 
 Vector2 Input::mousePos = Vector2();
 char Input::mouseBtn[];

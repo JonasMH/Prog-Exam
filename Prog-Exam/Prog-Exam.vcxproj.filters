@@ -60,9 +60,6 @@
     <ClCompile Include="BarGraph.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MergeSort.h">
-      <Filter>Header Files\Sorts</Filter>
-    </ClCompile>
     <ClCompile Include="BubbleSort.h">
       <Filter>Header Files\Sorts</Filter>
     </ClCompile>
@@ -72,8 +69,11 @@
     <ClCompile Include="BubbleSort.cpp">
       <Filter>Source Files\Sorts</Filter>
     </ClCompile>
-    <ClCompile Include="MergeSort.cpp">
+    <ClCompile Include="SelectionSort.cpp">
       <Filter>Source Files\Sorts</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectionSort.h">
+      <Filter>Header Files\Sorts</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -82,9 +82,6 @@
     </ClInclude>
     <ClInclude Include="Vector2.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Shape.h">
-      <Filter>Header Files\Shapes</Filter>
     </ClInclude>
     <ClInclude Include="Square.h">
       <Filter>Header Files\Shapes\Basic</Filter>

@@ -1,6 +1,8 @@
 #pragma once
 #include "Square.h"
 #include "Input.h"
+#include "Window.h"
+#include "SortingScene.h"
 
 
 class Menu

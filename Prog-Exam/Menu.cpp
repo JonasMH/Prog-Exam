@@ -1,7 +1,5 @@
 #pragma once
 #include "Menu.h"
-#include "Window.h"
-#include "SortingScene.h"
 
 Menu::Menu()
 {
@@ -36,7 +34,7 @@ void Menu::Draw()
 	{
 		selected = 1;
 	}
-	DrawTextInMenu("Merge sort", 10, Vector2(-0.1f, -0.12f));
+	DrawTextInMenu("Selection sort", 14, Vector2(-0.1f, -0.12f));
 
 	if(DrawButton(Vector2(0.2f, -0.5f), Vector2(-0.2f, -0.3f), 3, selected == 2 ? 0x01 : 0x00))
 	{
@@ -51,28 +49,29 @@ void Menu::Draw()
 	DrawTextInMenu("Exit", 4, Vector2(-0.1f, -0.72f));
 
 	//Count
-	if(DrawButton(Vector2(-0.7f, -0.05), Vector2(-0.76f, 0.05), 5, 0x00))
+	if(DrawButton(Vector2(-0.7f, -0.05f), Vector2(-0.76f, 0.05f), 5, 0x00))
 	{
 		bars -= 10;
 		if(bars < 0)
 			bars = 0;
 	}
-	DrawTextInMenu("-", 1, Vector2(-0.735f, -0.015));
+	DrawTextInMenu("-", 1, Vector2(-0.735f, -0.015f));
 	
-	if(DrawButton(Vector2(-0.55f, -0.05), Vector2(-0.61f, 0.05), 6, 0x00))
+	if(DrawButton(Vector2(-0.55f, -0.05f), Vector2(-0.61f, 0.05f), 6, 0x00))
 	{
 		bars += 10;
 
 		if(bars > 500)
 			bars = 500;
 	}
-	DrawTextInMenu("+", 1, Vector2(-0.585f, -0.015));
+	DrawTextInMenu("+", 1, Vector2(-0.585f, -0.015f));
 
 	char barCount[5];
 
 	sprintf_s(barCount, "%d", bars);
 
-	DrawTextInMenu(barCount, 5, Vector2(-0.68f, -0.015), Vector3(1, 1, 1));
+	DrawTextInMenu(barCount, 5, Vector2(-0.68f, -0.015f), Vector3(1, 1, 1));
+	DrawTextInMenu("Number of bars", 14, Vector2(-0.75f, 0.08f), Vector3(1, 1, 1));
 }
 
 char Menu::DrawButton(Vector2 i_P1, Vector2 i_P2, int id, char i_Active)

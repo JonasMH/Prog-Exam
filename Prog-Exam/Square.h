@@ -2,6 +2,7 @@
 #include <GL\freeglut.h>
 #include "Triangle.h"
 #include "Log.h"
+#include "Window.h"
 
 class Square
 {

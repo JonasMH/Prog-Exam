@@ -11,11 +11,11 @@ char SortingScene::isDone = 0x00;
 
 void SortingScene::Setup()
 {
-	srand(time(NULL));
-	lastTime = clock();
+	srand((unsigned int)time(NULL));
+	lastTime = (float)clock();
 	for(int i = 0; i < Menu::bars; i++)
 	{
-		toSort[i] = rand() % Menu::bars;
+		toSort[i] = rand() % Menu::bars + 1;
 	}
 
 	isDone = 0x00;
@@ -28,7 +28,7 @@ void SortingScene::Setup()
 		InsertionSort::Reset();
 		break;
 	case 1:
-		
+		SelectionSort::Reset();
 		break;
 	case 2:
 		BubbleSort::Reset();
@@ -67,11 +67,11 @@ void SortingScene::Draw()
 	Menu::DrawTextInMenu(buffer, 50, Vector2(-0.2f, 0.95f), Vector3(1, 1, 1));
 
 	//if(DrawButton(Vector2(-0.7f, -0.05), Vector2(-0.76f, 0.05), 5, 0x00))
-	if(Menu::DrawButton(Vector2(-0.85, 0.90f), Vector2(-1, 1), 7, 0x00))
+	if(Menu::DrawButton(Vector2(-0.85f, 0.90f), Vector2(-1, 1), 7, 0x00))
 	{
 		Window::sceneToShow = 0;
 	}
-	Menu::DrawTextInMenu("Back", 4, Vector2(-0.98, 0.93f), Vector3(0, 0, 0));
+	Menu::DrawTextInMenu("Back", 4, Vector2(-0.98f, 0.93f), Vector3(0, 0, 0));
 
 	//Sort
 	if(clock() - lastTime > 20)
@@ -89,7 +89,7 @@ void SortingScene::SortingStep()
 		InsertionSort::Step();
 		break;
 	case 1:
-		
+		SelectionSort::Step();
 		break;
 	case 2:
 		BubbleSort::Step();

@@ -3,6 +3,7 @@
 #include <time.h>
 #include "BubbleSort.h"
 #include "InsertionSort.h"
+#include "SelectionSort.h"
 
 class SortingScene
 {

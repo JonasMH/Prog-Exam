@@ -1,6 +1,5 @@
 #pragma once
 #include "BarGraph.h"
-#include "SortingScene.h"
 
 void BarGraph::Draw()
 {

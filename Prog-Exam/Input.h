@@ -1,5 +1,8 @@
 #pragma once
 #include "Vector2.h"
+#include "Log.h"
+#include <GL\freeglut.h>
+#include "Window.h"
 
 class Input
 {

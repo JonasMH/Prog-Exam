@@ -83,8 +83,8 @@
     <ClCompile Include="BubbleSort.h" />
     <ClCompile Include="InsertionSort.cpp" />
     <ClCompile Include="Menu.cpp" />
-    <ClCompile Include="MergeSort.cpp" />
-    <ClCompile Include="MergeSort.h" />
+    <ClCompile Include="SelectionSort.cpp" />
+    <ClCompile Include="SelectionSort.h" />
     <ClCompile Include="SortingScene.cpp" />
     <ClCompile Include="Square.cpp" />
     <ClCompile Include="Triangle.cpp" />
@@ -103,7 +103,6 @@
     <ClInclude Include="Input.h" />
     <ClInclude Include="Log.h" />
     <ClInclude Include="Menu.h" />
-    <ClInclude Include="Shape.h" />
     <ClInclude Include="Square.h" />
     <ClInclude Include="Triangle.h" />
     <ClInclude Include="Vector2.h" />

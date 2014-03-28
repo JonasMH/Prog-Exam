@@ -2,6 +2,7 @@
 #include "Square.h"
 #include "Window.h"
 #include "Menu.h"
+#include "SortingScene.h"
 
 class BarGraph
 {
