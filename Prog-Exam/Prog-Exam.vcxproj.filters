@@ -57,9 +57,6 @@
     <ClCompile Include="SortingScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BarGraph.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="BubbleSort.h">
       <Filter>Header Files\Sorts</Filter>
     </ClCompile>
@@ -74,6 +71,9 @@
     </ClCompile>
     <ClCompile Include="SelectionSort.h">
       <Filter>Header Files\Sorts</Filter>
+    </ClCompile>
+    <ClCompile Include="BarGraph.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

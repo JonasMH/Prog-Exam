@@ -8,7 +8,6 @@ class Triangle
 {
 public:
 	Triangle(Vector2, Vector2, Vector2);
-
 	static void Draw(Vector2, Vector2, Vector2);
 	static void Draw(Vector2, Vector2, Vector2, Vector3);
 };

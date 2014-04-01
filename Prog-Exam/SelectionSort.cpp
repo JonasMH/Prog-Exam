@@ -18,7 +18,6 @@ void SelectionSort::Step()
 {
 	if(inLoop == 0x01)
 	{
-		Log::Write("HERE %d\n", i);
 		if(i < Menu::bars)
 		{
 			if (SortingScene::GetFromArray(iMin) > SortingScene::GetFromArray(i))
