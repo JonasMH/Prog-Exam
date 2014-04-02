@@ -63,8 +63,8 @@ void SortingScene::Draw()
 
 	//Top text
 	char buffer[60];
-	sprintf_s(buffer, "Set count: %d. Get count: %d.", setCount, getCount);
-	Menu::DrawTextInMenu(buffer, 50, Vector2(-0.2f, 0.95f), Vector3(1, 1, 1));
+	int wrote = sprintf_s(buffer, "Set count: %d. Get count: %d.", setCount, getCount);
+	Menu::DrawTextInMenu(buffer, wrote, Vector2(-0.2f, 0.95f), Vector3(1, 1, 1));
 
 	//if(DrawButton(Vector2(-0.7f, -0.05), Vector2(-0.76f, 0.05), 5, 0x00))
 	if(Menu::DrawButton(Vector2(-0.85f, 0.90f), Vector2(-1, 1), 7, 0x00))
