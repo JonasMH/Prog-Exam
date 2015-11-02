@@ -1,4 +1,3 @@
-#pragma once
 #include "Input.h"
 
 Vector2 Input::mousePos = Vector2();

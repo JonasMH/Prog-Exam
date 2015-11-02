@@ -1,4 +1,5 @@
 #pragma once
+
 #include "Square.h"
 #include "Window.h"
 #include "Menu.h"

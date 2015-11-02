@@ -1,4 +1,3 @@
-#pragma once
 #include "Square.h"
 
 void Square::Draw(Vector2 i_P1, Vector2 i_P2)

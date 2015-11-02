@@ -1,5 +1,4 @@
-﻿#pragma once
-#include "InsertionSort.h"
+﻿#include "InsertionSort.h"
 
 int InsertionSort::progress = 1;
 int InsertionSort::jProgress = -1;

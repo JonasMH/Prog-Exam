@@ -1,4 +1,3 @@
-#pragma once
 #include "Window.h"
 
 Vector2 Window::windowSize = Vector2(1280, 720);

@@ -1,4 +1,3 @@
-#pragma once
 #include "Log.h"
 
 void Log::Write(const char* format, ...)

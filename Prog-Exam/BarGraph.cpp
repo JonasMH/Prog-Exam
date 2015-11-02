@@ -1,4 +1,3 @@
-#pragma once
 #include "BarGraph.h"
 
 void BarGraph::Draw()

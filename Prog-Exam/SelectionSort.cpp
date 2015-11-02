@@ -1,4 +1,3 @@
-#pragma once
 #include "SelectionSort.h"
 
 int SelectionSort::iMin = 0;

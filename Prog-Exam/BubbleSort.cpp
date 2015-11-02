@@ -1,4 +1,3 @@
-#pragma once
 #include "BubbleSort.h"
 
 char BubbleSort::swapped = 0x00;

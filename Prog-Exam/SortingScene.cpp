@@ -1,4 +1,3 @@
-#pragma once
 #include "SortingScene.h"
 
 int SortingScene::toSort[1000];

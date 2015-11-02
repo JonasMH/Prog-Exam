@@ -1,6 +1,7 @@
 #pragma once
-#include "BarGraph.h"
+
 #include <time.h>
+#include "BarGraph.h"
 #include "BubbleSort.h"
 #include "InsertionSort.h"
 #include "SelectionSort.h"

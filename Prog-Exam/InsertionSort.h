@@ -5,7 +5,6 @@
 class InsertionSort
 {
 public:
-
 	static void Reset();
 	static void Step();
 

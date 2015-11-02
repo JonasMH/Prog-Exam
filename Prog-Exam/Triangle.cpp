@@ -1,4 +1,3 @@
-#pragma once
 #include "Triangle.h"
 
 void Triangle::Draw(Vector2 i_P1, Vector2 i_P2, Vector2 i_P3)
