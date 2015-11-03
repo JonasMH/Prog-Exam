@@ -1,7 +1,7 @@
 #include "Input.h"
 
 Vector2 Input::mousePos = Vector2();
-char Input::mouseBtn[];
+bool Input::mouseBtn[];
 
 void Input::Init()
 {
@@ -22,13 +22,13 @@ void Input::ResetMouseClick()
 
 void Input::SetMouseBTN(int btn, int state, int x, int y)
 {
-	if(state == GLUT_UP)
-		mouseBtn[btn] = 0x00;
+	if (state == GLUT_UP)
+		mouseBtn[btn] = false;
 	else
-		mouseBtn[btn] = 0x01;
+		mouseBtn[btn] = true;
 }
 
-char Input::GetMouseBTN(int btn)
+bool Input::GetMouseBTN(int btn)
 {
 	return mouseBtn[btn];
 }

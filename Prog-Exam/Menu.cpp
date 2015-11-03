@@ -64,8 +64,8 @@ void Menu::Draw()
 
 	sprintf_s(barCount, "%d", bars);
 
-	DrawTextInMenu(barCount, Vector2(-0.68f, -0.015f), Vector3(1, 1, 1));
-	DrawTextInMenu("Number of bars", Vector2(-0.75f, 0.08f), Vector3(1, 1, 1));
+	DrawTextInMenu(barCount, Vector2(-0.68f, -0.015f), Color::White);
+	DrawTextInMenu("Number of bars", Vector2(-0.75f, 0.08f), Color::White);
 }
 
 bool Menu::DrawButton(Vector2 p1, Vector2 p2, int id, bool active)
@@ -103,7 +103,7 @@ void Menu::DrawTextInMenu(char* text, Vector2 pos)
 void Menu::DrawTextInMenu(char* text, Vector2 pos, Vector3 color)
 {
 	glPushMatrix();
-	glColor3f(color.X, color.Y, color.Z);
+	Color::SetActiveColor(color);
 	glRasterPos2f(pos.X, pos.Y);
 	
 	while(*text != '\0') 

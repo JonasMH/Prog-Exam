@@ -2,6 +2,7 @@
 #include "Square.h"
 #include "Input.h"
 #include "Window.h"
+#include "Color.h"
 #include "SortingScene.h"
 
 

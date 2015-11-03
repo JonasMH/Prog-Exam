@@ -2,18 +2,21 @@
 
 void BarGraph::Draw()
 {
-	float barProcent = 2.f / Menu::bars;
+	float procentPerBar = 2.f / Menu::bars;
 
 	for(int i = 0; i < Menu::bars; i++)
 	{
-		Vector3 color = Vector3(1, 1, 1);
+		Color color = Color::White;
 		
 		if(i == SortingScene::activeBar)
-			color = Vector3(1, 0, 0);
+			color = Color::Red;
 
 		if(SortingScene::isDone)
-			color = Vector3(0, 1, 0);
+			color = Color::Green;
 
-		Square::Draw(Vector2(-1 + barProcent * i, -1), Vector2(-1 + barProcent + barProcent * i, -1 + barProcent * SortingScene::toSort[i] * 0.9f), color);
+		Square::Draw(
+			Vector2(-1 + procentPerBar * i, -1), //Left-Bottom
+			Vector2(-1 + procentPerBar + procentPerBar * i, -1 + procentPerBar * SortingScene::toSort[i] * 0.9f), //Right-Top
+			color);
 	}
 }
