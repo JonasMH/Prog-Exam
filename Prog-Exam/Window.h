@@ -13,12 +13,12 @@ public:
 	
 	static void Init(int, char**);
 	static void Start();
-	static void UpdateTitle(char[]);
+	static void SetTitle(char*);
 	static Vector2 GetWindowSize();
 	static char sceneToShow;
 
 private:
-	static Vector2 windowSize;
+	static Vector2 windowSize_;
 	static void Draw();
 	static void ResizeWindow(int, int);
 };

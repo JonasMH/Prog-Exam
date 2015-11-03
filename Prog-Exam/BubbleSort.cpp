@@ -1,9 +1,5 @@
 #include "BubbleSort.h"
 
-char BubbleSort::swapped = 0x00;
-char BubbleSort::hasSet = 0x01;
-int BubbleSort::i = 1;
-
 void BubbleSort::Reset()
 {
 	swapped = 0x00;

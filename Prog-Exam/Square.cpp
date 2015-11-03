@@ -1,32 +1,32 @@
 #include "Square.h"
 
-void Square::Draw(Vector2 i_P1, Vector2 i_P2)
+void Square::Draw(Vector2 p1, Vector2 p2)
 {
-	Draw(i_P1, i_P2, Vector3(1, 1, 1));
+	Draw(p1, p2, Vector3(1, 1, 1));
 }
 
-void Square::Draw(Vector2 i_P1, Vector2 i_P2, Vector3 i_Color)
+void Square::Draw(Vector2 p1, Vector2 p2, Vector3 color)
 {
-	Triangle::Draw(i_P1, i_P2, Vector2(i_P2.x, i_P1.y), i_Color);
-	Triangle::Draw(i_P1, i_P2, Vector2(i_P1.x, i_P2.y), i_Color);
+	Triangle::Draw(p1, p2, Vector2(p2.X, p1.Y), color);
+	Triangle::Draw(p1, p2, Vector2(p1.X, p2.Y), color);
 }
 
-bool Square::IsHovering(Vector2 i_P1, Vector2 i_P2, Vector2 i_Pos)
+bool Square::IsHovering(Vector2 p1, Vector2 p2, Vector2 mousePos)
 {
-	i_Pos.x = (float)i_Pos.x / Window::GetWindowSize().x * 2 - 1;
-	i_Pos.y = (float)i_Pos.y / Window::GetWindowSize().y * 2 - 1;
+	mousePos.X = (float)mousePos.X / Window::GetWindowSize().X * 2 - 1;
+	mousePos.Y = (float)mousePos.Y / Window::GetWindowSize().Y * 2 - 1;
 
-	if(i_P1.x < i_Pos.x)
-		return 0x00;
+	if(p1.X < mousePos.X)
+		return false;
 
-	if(i_P2.x > i_Pos.x)
-		return 0x00;
+	if(p2.X > mousePos.X)
+		return false;
 
-	if(i_P1.y > i_Pos.y)
-		return 0x00;
+	if(p1.Y > mousePos.Y)
+		return false;
 
-	if(i_P2.y < i_Pos.y)
-		return 0x00;
+	if(p2.Y < mousePos.Y)
+		return false;
 
-	return 0x01;
+	return true;
 }

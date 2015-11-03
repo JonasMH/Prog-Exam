@@ -1,7 +1,7 @@
 #include "Window.h"
 
-Vector2 Window::windowSize = Vector2(1280, 720);
-char Window::sceneToShow = 0x00;
+Vector2 Window::windowSize_ = Vector2(1280, 720);
+char Window::sceneToShow = 0;
 
 void Window::Init(int argc, char **argv)
 {
@@ -19,7 +19,7 @@ void Window::Init(int argc, char **argv)
 	glutIdleFunc(Window::Draw);
 	glutReshapeFunc(Window::ResizeWindow);
 
-	Window::UpdateTitle("Sorting Algorithms Visualization - By Jonas Møgelvang Hansen");
+	Window::SetTitle("Sorting Algorithms Visualization - By Jonas Møgelvang Hansen");
 
 	Log::Write("Game initialization done\n");
 }
@@ -30,17 +30,17 @@ void Window::Start()
 	glutMainLoop();
 }
 
-void Window::ResizeWindow(int i_Width, int i_Height)
+void Window::ResizeWindow(int width, int height)
 {
 	//Force res
 	glutReshapeWindow(1280, 720);
-	windowSize.x = (float)i_Width;
-	windowSize.y = (float)i_Height;
+	windowSize_.X = (float)width;
+	windowSize_.Y = (float)height;
 }
 
 Vector2 Window::GetWindowSize()
 {
-	return windowSize;
+	return windowSize_;
 }
 
 void Window::Draw()
@@ -66,8 +66,7 @@ void Window::Draw()
 	glutSwapBuffers();
 }
 
-void Window::UpdateTitle(char i_Title[])
+void Window::SetTitle(char* title)
 {
-	//Update titlte
-	glutSetWindowTitle(i_Title);
+	glutSetWindowTitle(title);
 }

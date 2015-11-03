@@ -6,7 +6,5 @@ public:
 	Vector2();
 	Vector2(float, float);
 
-	float x, y;
-private:
-
+	float X, Y;
 };

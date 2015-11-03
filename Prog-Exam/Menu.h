@@ -8,15 +8,12 @@
 class Menu
 {
 public:
-	Menu();
-	~Menu();
-
 	static void Draw();
 	static int selected;
 	static int bars;
-	static void DrawTextInMenu(char*, int, Vector2);
-	static void DrawTextInMenu(char*, int, Vector2, Vector3);
-	static char DrawButton(Vector2, Vector2, int, char);
+	static void DrawTextInMenu(char*, Vector2);
+	static void DrawTextInMenu(char*, Vector2, Vector3);
+	static bool DrawButton(Vector2, Vector2, int, bool);
 
 private:
 	static char lastBtn;

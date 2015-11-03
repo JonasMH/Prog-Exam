@@ -1,14 +1,15 @@
 #pragma once
 #include "Menu.h"
 #include "SortingScene.h"
+#include "SortingAlgorithm.h"
 
-class InsertionSort
+class InsertionSort : public SortingAlgorithm
 {
 public:
-	static void Reset();
-	static void Step();
+	void Reset();
+	void Step();
 
 private:
-	static int progress;
-	static int jProgress;
+	int progress = 1;
+	int jProgress = -1;
 };

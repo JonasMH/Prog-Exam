@@ -1,16 +1,16 @@
 #pragma once
 #include "Menu.h"
 #include "SortingScene.h"
+#include "SortingAlgorithm.h"
 
-class BubbleSort
+class BubbleSort : public SortingAlgorithm
 {
 public:
-
-	static void Reset();
-	static void Step();
+	void Reset();
+	void Step();
 
 private:
-	static char swapped;
-	static char hasSet;
-	static int i;
+	char swapped = 0;
+	char hasSet = 1;
+	int i = 1;
 };

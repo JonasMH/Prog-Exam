@@ -11,8 +11,8 @@ void Input::Init()
 
 void Input::SetMousePos(int x, int y)
 {
-	mousePos.x = (float)x;
-	mousePos.y = Window::GetWindowSize().y - (float)y;
+	mousePos.X = (float)x;
+	mousePos.Y = Window::GetWindowSize().Y - (float)y;
 }
 
 void Input::ResetMouseClick()

@@ -7,7 +7,6 @@
 class Input
 {
 public:
-
 	static void Init();
 	static void SetMousePos(int, int);
 	static void SetMouseBTN(int, int, int, int);

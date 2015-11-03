@@ -1,10 +1,5 @@
 #include "SelectionSort.h"
 
-int SelectionSort::iMin = 0;
-int SelectionSort::i = 0;
-int SelectionSort::j = 0;
-char SelectionSort::inLoop = 0x00;
-
 void SelectionSort::Reset()
 {
 	j = 0;

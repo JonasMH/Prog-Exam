@@ -1,16 +1,17 @@
 #include "Triangle.h"
 
-void Triangle::Draw(Vector2 i_P1, Vector2 i_P2, Vector2 i_P3)
+void Triangle::Draw(Vector2 p1, Vector2 p2, Vector2 p3)
 {
-	Triangle::Draw(i_P1, i_P2, i_P3, Vector3(1, 1, 1));
+	Triangle::Draw(p1, p2, p3, Vector3(1, 1, 1));
 }
 
-void Triangle::Draw(Vector2 i_P1, Vector2 i_P2, Vector2 i_P3, Vector3 i_Color)
+void Triangle::Draw(Vector2 p1, Vector2 p2, Vector2 p3, Vector3 color)
 {
-	glColor3f(i_Color.x, i_Color.y, i_Color.z);
+	glColor3f(color.X, color.Y, color.Z);
+
 	glBegin(GL_TRIANGLES);
-		glVertex3f((GLfloat)i_P1.x, (GLfloat)i_P1.y, 0.0);
-		glVertex3f((GLfloat)i_P2.x, (GLfloat)i_P2.y, 0.0);
-		glVertex3f((GLfloat)i_P3.x, (GLfloat)i_P3.y, 0.0);
+		glVertex3f((GLfloat)p1.X, (GLfloat)p1.Y, 0.0);
+		glVertex3f((GLfloat)p2.X, (GLfloat)p2.Y, 0.0);
+		glVertex3f((GLfloat)p3.X, (GLfloat)p3.Y, 0.0);
 	glEnd();
 }

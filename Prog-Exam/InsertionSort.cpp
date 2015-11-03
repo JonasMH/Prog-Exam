@@ -1,8 +1,5 @@
 ﻿#include "InsertionSort.h"
 
-int InsertionSort::progress = 1;
-int InsertionSort::jProgress = -1;
-
 void InsertionSort::Reset()
 {
 	progress = 1;

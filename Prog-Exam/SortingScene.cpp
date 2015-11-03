@@ -5,7 +5,8 @@ float SortingScene::lastTime;
 int SortingScene::setCount = 0;
 int SortingScene::getCount = 0;
 int SortingScene::activeBar = 0;
-char SortingScene::isDone = 0x00;
+bool SortingScene::isDone = false;
+SortingAlgorithm* SortingScene::activeAlgorithm = new InsertionSort();
 
 
 void SortingScene::Setup()
@@ -17,22 +18,11 @@ void SortingScene::Setup()
 		toSort[i] = rand() % Menu::bars + 1;
 	}
 
-	isDone = 0x00;
+	isDone = false;
 	setCount = 0;
 	getCount = 0;
 
-	switch (Menu::selected)
-	{
-	case 0:
-		InsertionSort::Reset();
-		break;
-	case 1:
-		SelectionSort::Reset();
-		break;
-	case 2:
-		BubbleSort::Reset();
-		break;
-	}
+	activeAlgorithm->Reset();
 }
 
 int SortingScene::GetFromArray(int i_Index)
@@ -63,14 +53,14 @@ void SortingScene::Draw()
 	//Top text
 	char buffer[60];
 	int wrote = sprintf_s(buffer, "Set count: %d. Get count: %d.", setCount, getCount);
-	Menu::DrawTextInMenu(buffer, wrote, Vector2(-0.2f, 0.95f), Vector3(1, 1, 1));
+	Menu::DrawTextInMenu(buffer, Vector2(-0.2f, 0.95f), Vector3(1, 1, 1));
 
 	//if(DrawButton(Vector2(-0.7f, -0.05), Vector2(-0.76f, 0.05), 5, 0x00))
 	if(Menu::DrawButton(Vector2(-0.85f, 0.90f), Vector2(-1, 1), 7, 0x00))
 	{
 		Window::sceneToShow = 0;
 	}
-	Menu::DrawTextInMenu("Back", 4, Vector2(-0.98f, 0.93f), Vector3(0, 0, 0));
+	Menu::DrawTextInMenu("Back", Vector2(-0.98f, 0.93f), Vector3(0, 0, 0));
 
 	//Sort
 	if(clock() - lastTime > 20)
@@ -82,16 +72,11 @@ void SortingScene::Draw()
 
 void SortingScene::SortingStep()
 {
-	switch (Menu::selected)
-	{
-	case 0:
-		InsertionSort::Step();
-		break;
-	case 1:
-		SelectionSort::Step();
-		break;
-	case 2:
-		BubbleSort::Step();
-		break;
-	}
+	activeAlgorithm->Step();
+}
+
+void SortingScene::SetAlgorithm(SortingAlgorithm* algo)
+{
+	delete activeAlgorithm;
+	activeAlgorithm = algo;
 }
